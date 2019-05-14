@@ -13,15 +13,9 @@ namespace ExactArithmetic
 		*  Euclid's Algorithm would be much more efficient.
 		*/
 	{
-		long long int potentialFactor = std::min(std::abs(i), std::abs(j));
-		if (potentialFactor == 0) return 1; // To avoid returning 0 when one argument is 0.
-
-		for (; potentialFactor > 1; --potentialFactor)
-		{
-			if (i % potentialFactor == 0 && j % potentialFactor == 0) break; // Found a common divisor.
-		}
-
-		return potentialFactor;
+		if(i == 0)
+			return j;
+		return gcd(j%i, i);
 	}
 
 } // End of namespace ExactArithmetic
