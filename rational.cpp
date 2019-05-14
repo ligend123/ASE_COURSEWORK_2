@@ -67,22 +67,22 @@ namespace ExactArithmetic
 
 	bool Rational::operator<(const Rational & r) const
 	{
-		return num < r.num || denom < r.denom;
+		return num * r.denom < r.num * denom;
 	}
 
 	bool Rational::operator>(const Rational & r) const
 	{
-		return num > r.num || denom > r.denom;
+		return num * r.denom > r.num * denom;
 	}
 
 	bool Rational::operator<=(const Rational & r) const
 	{
-		return num <= r.num || denom <= r.denom;
+		return num * r.denom <= r.num * denom;
 	}
 
 	bool Rational::operator>=(const Rational & r) const
 	{
-		return num >= r.num || denom >= r.denom;
+		num * r.denom >= r.num * denom;
 	}
 
 	////////////////////////////////////////////////////////////////////////////////
